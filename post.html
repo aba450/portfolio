@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post Name</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="default.css" />
+
+    <style type="text/css">
+      .img-container {
+        max-width: 600px;
+      }
+
+      img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <!-- Link around dots-wrapper added after tutorial video -->
+      <a href="index.html">
+        <div class="dots-wrapper">
+          <div id="dot-1" class="browser-dot"></div>
+          <div id="dot-2" class="browser-dot"></div>
+          <div id="dot-3" class="browser-dot"></div>
+        </div>
+      </a>
+
+      <ul id="navigation">
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="main-container">
+      <br />
+
+      <div class="img-container">
+        <img src="images/dash.jpg" />
+      </div>
+
+      <h3>Netflix Clone</h3>
+
+      <p>
+        This is a project I am currently working on as part of DevOps course
+        that I am taking this fall.
+        <br />
+        <br />
+        This is a basic Movie search and stream Web Application
+        <br />
+        <br />
+        We have used agile methodology to develop the project, where we
+        developed the project in multiple iterations.
+        <br />
+      </p>
+
+      <h5>Technologies:</h5>
+      <ul>
+        <li>- Python</li>
+        <li>- Flask + RestX Framework</li>
+        <li>- React JS</li>
+        <li>- Mongo DB Atlas</li>
+        <li>- AWS (EC2, S3, Amplify)</li>
+        <li>- GitHub Actions</li>
+        <li>- Docker</li>
+        <li>- Coveralls</li>
+      </ul>
+
+      <br />
+
+      <div class="img-container">
+        <img src="images/ecom.jpg" />
+      </div>
+      <h3>Dining Concierge</h3>
+
+      <p>
+        “Dining Concierge chat-bot” is an intelligent Natural Language driven
+        chat-bot that is designed using multiple AWS services. This chat-bot
+        helps in providing restaurant
+        <br />
+        suggestions based on user requirements such as - City, Time, People
+        count, Cuisine type and Date. The frontend is hosted in AWS S3 and
+        provides a web-app user interface to
+        <br />
+        interact with the chat bot. The bot uses the yelp API to fetch relevant
+        suggestions and mails the suggestions on the email-id that the user
+        provides or sends a text message to the number provided.
+        <br />
+      </p>
+
+      <h5>Technologies:</h5>
+      <ul>
+        <li>- Python</li>
+        <li>- AWS Lex</li>
+        <li>- React JS</li>
+        <li>- Dynamo DB</li>
+        <li>- AWS Lambda</li>
+        <li>- SQS</li>
+        <li>- SNS</li>
+        <li>- Elastic Search</li>
+        <li>- API Gateway</li>
+      </ul>
+
+      <br />
+
+      <div class="img-container">
+        <img src="images/smartdoor.jpg" />
+      </div>
+
+      <h3>Smart Door</h3>
+
+      <p>
+        The project uses Kinesis Video Streams and Amazon Rekognition to build a
+        distributed system that authenticates people and provides them with
+        access to a virtual door. Each visitor is indexed by the FaceId detected
+        by Amazon Rekognition, alongside the name of the visitor and their phone
+        number. When storing a new face, if the FaceId returned by Rekognition
+        already exists in the database, then the new photo is appended to the
+        existing photos array. There are 2 webpages (one for owner and one for
+        visitor) and 2 DynamoDB tables are maintained (“passcodes” table and
+        “visitors” table which has info about the visitors like photo, name and
+        phone number).
+        <br />
+        A Kinesis Video Stream is developed to capture and stream video for
+        analysis. For every known face detected by Rekognition, we send the
+        visitor an SMS message to the phone number on file. The text message
+        includes a PIN or a One-Time Passcode (OTP) that they can use to open
+        the virtual door. For every unknown face detected by Rekogniton, we send
+        an SMS to the “owner” a photo of the visitor. The text message includes
+        a link to approve access for the visitor.
+        <br />
+        If the owner approves thevisitor, we collect the name and phone number
+        of visitor, create a new record with the information and send the
+        visitor an SMS message to the phone number on file. The text message
+        includes the OTP required. Lastly, we authorize the OTP entered by the
+        user in the second web page. If the OTP is valid, we greet the user by
+        name and present a success message. If the OTP is invalid, we present a
+        “permission denied” message.
+        <br />
+      </p>
+
+      <h5>Technologies:</h5>
+      <ul>
+        <li>- Python</li>
+        <li>- AWS Kinesis</li>
+        <li>- React JS</li>
+        <li>- Dynamo DB</li>
+        <li>- AWS Lambda</li>
+        <li>- Rekognition</li>
+        <li>- SNS</li>
+        <li>- Amazon KVS</li>
+        <li>- API Gateway</li>
+      </ul>
+    </div>
+  </body>
+</html>
